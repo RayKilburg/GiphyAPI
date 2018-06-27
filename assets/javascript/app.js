@@ -2,11 +2,11 @@
 
 $("button").on("click", function() {
 //var queryURL = "https://api.giphy.com/v1/gifs/search?q=sWsnA7UXhW7EQhC9uPHFvYAxl9Jo6GMF";
+var person = $(this).attr("data-person");
 var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + 
 person + "&api_key=sWsnA7UXhW7EQhC9uPHFvYAxl9Jo6GMF&limit=10";
 console.log("app.js")
-// var klsk = $$(this).attr(data type);
-  var person = $(this).attr("data-person");
+  // var person = $(this).attr("data-person");
 //ajax request
 $.ajax({
     url: queryURL,
@@ -36,6 +36,7 @@ $.ajax({
 
     }
   });
+
 
 });
 
