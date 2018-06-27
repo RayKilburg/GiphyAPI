@@ -18,17 +18,18 @@ $("form").on("submit", function(event) {
   myButtons.push($("#user-input").val());
   renderButtons();
 });
-
+// var animal;
 $(document).on("click", ".user-button", function() {
   console.log($(this).text());
-});
+  var animal = $(this).text()
+// });
 
-$("button").on("click", function() {
+// $(document).on("click", ".user-button", function() {
   //var queryURL = "https://api.giphy.com/v1/gifs/search?q=sWsnA7UXhW7EQhC9uPHFvYAxl9Jo6GMF";
   var person = $(this).attr("data-person");
   var queryURL =
     "http://api.giphy.com/v1/gifs/search?q=" +
-    person +
+    animal +
     "&api_key=sWsnA7UXhW7EQhC9uPHFvYAxl9Jo6GMF&limit=10";
   console.log("app.js");
   // var person = $(this).attr("data-person");
