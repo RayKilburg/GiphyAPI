@@ -18,15 +18,12 @@ $("form").on("submit", function(event) {
   myButtons.push($("#user-input").val());
   renderButtons();
 });
-// var animal;
+ var animal;
 $(document).on("click", ".user-button", function() {
   console.log($(this).text());
-  var animal = $(this).text()
-// });
+ animal = $(this).text()
 
-// $(document).on("click", ".user-button", function() {
-  //var queryURL = "https://api.giphy.com/v1/gifs/search?q=sWsnA7UXhW7EQhC9uPHFvYAxl9Jo6GMF";
-  var person = $(this).attr("data-person");
+ //url variable
   var queryURL =
     "http://api.giphy.com/v1/gifs/search?q=" +
     animal +
@@ -60,13 +57,10 @@ $(document).on("click", ".user-button", function() {
         $("#gifs-appear-here").prepend(gifDiv);
       }
     });
+
 });
 
 renderButtons();
 
-//for loop to run through data
-
-//if else statments to run and puase
-//pause and stop gifs
-
-//get user text to = result
+//onclick function to pause gifs
+//how to call still gif from object or api
