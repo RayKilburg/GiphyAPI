@@ -44,3 +44,7 @@ input {
 p {
   font-family: "Bangers", cursive;
 }
+
+.gif {
+  float: right;
+}
