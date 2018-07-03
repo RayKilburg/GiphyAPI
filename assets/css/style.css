@@ -1,5 +1,41 @@
-#my-form{
-    margin: auto;
-    margin-right: 200px;
-    float: center;
+.jumbotron {
+  text-align: center;
+  font-family: "Bangers", cursive;
+  background-color: rgb(48, 51, 107);
+  color: whitesmoke;
+  border-radius: 20px;
+  font-size: 40px;
+}
+h1 {
+  font-size: 50px;
+}
+.user-button {
+  margin: 12px;
+  background-color: rgb(48, 51, 107);
+  color: whitesmoke;
+  border-radius: 5px;
+  border-color: whitesmoke;
+}
+#my-form {
+  text-align: center;
+  font-family: "Bangers", cursive;
+  background-color: rgb(48, 51, 107);
+  border-radius: 20px;
+  color: whitesmoke;
+}
+#user-input {
+  border-radius: 20px;
+  margin: 6px;
+}
+#myTarget {
+  text-align: center;
+  margin: 40px;
+}
+#gifs-appear-here {
+  width: 100%;
+  border-color: rgb(48, 51, 107);
+  border-width: 3px;
+}
+input {
+  border-radius: 15px;
 }

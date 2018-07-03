@@ -1,4 +1,13 @@
-var myButtons = ["dogs", "cats"];
+var myButtons = [
+  "Its Always Sunny In Philadelphia",
+  "Simpsons",
+  "Nathan For You",
+  "Super Bad",
+  "Family Guy",
+  "Futurama",
+  "Good The Bad and The Ugly",
+  "Star Wars"
+];
 
 //adding buttons to array myButtons
 function renderButtons() {
@@ -18,12 +27,12 @@ $("form").on("submit", function(event) {
   myButtons.push($("#user-input").val());
   renderButtons();
 });
- var animal;
+var animal;
 $(document).on("click", ".user-button", function() {
   console.log($(this).text());
- animal = $(this).text()
+  animal = $(this).text();
 
- //url variable
+  //url variable
   var queryURL =
     "http://api.giphy.com/v1/gifs/search?q=" +
     animal +
@@ -49,7 +58,33 @@ $(document).on("click", ".user-button", function() {
         var p = $("<p>").text("Rating: " + rating);
 
         var personImage = $("<img>");
-        personImage.attr("src", results[i].images.fixed_height.url);
+        personImage.attr("src", results[i].images.fixed_height_still.url);
+        /////////////////
+        personImage.attr(
+          "data-still",
+          response.data[i].images.fixed_height_still.url
+        );
+        personImage.attr(
+          "data-animate",
+          response.data[i].images.fixed_height.url
+        );
+        personImage.attr("data-state", "still");
+        personImage.attr("class", "gif");
+
+        $(".gif").on("click", function() {
+          // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+          var state = $(this).attr("data-state");
+          // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+          // Then, set the image's data-state to animate
+          // Else set src to the data-still value
+          if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+          } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+          }
+        });
 
         gifDiv.prepend(p);
         gifDiv.prepend(personImage);
@@ -57,7 +92,6 @@ $(document).on("click", ".user-button", function() {
         $("#gifs-appear-here").prepend(gifDiv);
       }
     });
-
 });
 
 renderButtons();
