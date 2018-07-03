@@ -58,7 +58,7 @@ $(document).on("click", ".user-button", function() {
         var p = $("<p>").text("Rating: " + rating);
 
         var personImage = $("<img>");
-        personImage.attr("src", results[i].images.fixed_height_still.url);
+        personImage.attr("src", results[i].images.fixed_height.url);
         /////////////////
         personImage.attr(
           "data-still",

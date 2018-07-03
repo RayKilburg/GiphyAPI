@@ -5,6 +5,7 @@
   color: whitesmoke;
   border-radius: 20px;
   font-size: 40px;
+  margin: 5px;
 }
 h1 {
   font-size: 50px;
@@ -22,6 +23,7 @@ h1 {
   background-color: rgb(48, 51, 107);
   border-radius: 20px;
   color: whitesmoke;
+  margin: 30px;
 }
 #user-input {
   border-radius: 20px;
@@ -38,4 +40,7 @@ h1 {
 }
 input {
   border-radius: 15px;
+}
+p {
+  font-family: "Bangers", cursive;
 }
