@@ -37,7 +37,7 @@ $(document).on("click", ".user-button", function() {
 
   //url variable
   var queryURL =
-    "http://api.giphy.com/v1/gifs/search?q=" +
+    "https://api.giphy.com/v1/gifs/search?q=" +
     animal +
     "&api_key=sWsnA7UXhW7EQhC9uPHFvYAxl9Jo6GMF&limit=10";
   console.log("app.js");

@@ -43,8 +43,19 @@ input {
 }
 p {
   font-family: "Bangers", cursive;
+  text-align: center;
 }
-
+/* .item{
+  background-color: brown;
+  border: 50px;
+  border-color: rgb(48, 51, 107);
+} */
 .gif {
   float: right;
+  margin: 10px;
+  border-color: blueviolet;
+  border: 5px;
+}
+body{
+  background-color: rgb(206,214,224)
 }
