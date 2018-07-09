@@ -1,3 +1,3 @@
 # GiphyAPI
 
-Gifs switch back and forth from still to animated but some are bugged.
+Type in your favorite TV show or Movie and see your favorite gifs from that movie
